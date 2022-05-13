@@ -14,3 +14,16 @@ Install weblogic stack patch bundles
 
 It was discovered during testing that spbat doesn't currently work with non-semver JDK versions.
 For instance, spbat works with `JDK 11.0.15`, but not with `JDK 11.0.15.1`
+
+## Release 0.1.1
+
+**Features**
+
+**Bugfixes**
+
+Delete an errant character that snuck into the code
+
+**Known Issues**
+
+It was discovered during testing that spbat doesn't currently work with non-semver JDK versions.
+For instance, spbat works with `JDK 11.0.15`, but not with `JDK 11.0.15.1`

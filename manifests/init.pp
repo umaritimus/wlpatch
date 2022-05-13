@@ -33,7 +33,7 @@ class wlpatch  (
           }
 
           exec { "Expand ${patch_path} to ${pkgtemp}" :
-            command   => (@("EOT")),
+            command   => Sensitive(@("EOT")),
                 Try {
                   New-Item -Path "${pkgtemp}" -Type Directory -Force | Out-Null
                   Set-Location -Path "${pkgtemp}"
@@ -46,13 +46,14 @@ class wlpatch  (
                     ) `
                     -Wait `
                     -ErrorAction Stop `
-                    -NoNewWindow | Out-Nullc
+                    -NoNewWindow | Out-Null
                 } Catch {
                   Exit 1
                 }
               |-EOT
             provider  => powershell,
             logoutput => true,
+            timeout   => 600,
             require   => [ Exec["Check ${patch_path}","Check ${jar_path}"] ],
           }
 
@@ -75,6 +76,7 @@ class wlpatch  (
               |-EOT
             provider  => powershell,
             logoutput => true,
+            timeout   => 600,
             require   => [ Exec["Expand ${patch_path} to ${pkgtemp}"] ],
           }
 
