@@ -21,7 +21,7 @@ Ensure that prior to execution of wlpatch, you define the weblogic_patches hash 
 
 ```yaml
 ---
-jdk_patches:
+weblogic_patches:
   34084007: "//share/patches/34084007 - WLS STACK PATCH BUNDLE 14.1.1.0.220418/p34084007_141100_Generic.zip"
 ```
 
