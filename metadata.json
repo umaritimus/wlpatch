@@ -2,9 +2,11 @@
   "name": "umaritimus-wlpatch",
   "version": "0.1.0",
   "author": "umaritimus",
-  "summary": "",
+  "summary": "wlpatch is designed to assist deploying WLS STACK PATCH BUNDLEs",
   "license": "MIT",
-  "source": "",
+  "source": "https://github.com/umaritimus/wlpatch.git",
+  "project_page": "https://github.com/umaritimus/wlpatch",
+  "issues_url": "https://github.com/umaritimus/wlpatch",
   "dependencies": [
 
   ],
